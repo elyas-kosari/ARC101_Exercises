@@ -3,24 +3,24 @@
     <outboundMessages>
         <fullName>OBM_Account</fullName>
         <apiVersion>60.0</apiVersion>
-        <endpointUrl>https://288a8e30-f19d-4f67-b776-7d0af2d91064.mock.pstmn.io/outboundMessageListener</endpointUrl>
+        <endpointUrl>https://cc1d81a2-b1dc-449f-8947-4b597ab243a9.mock.pstmn.io/outboundMessageListener</endpointUrl>
         <fields>AccountNumber</fields>
         <fields>AccountSource</fields>
         <fields>AnnualRevenue</fields>
         <fields>BillingCity</fields>
         <fields>BillingCountry</fields>
+        <fields>BillingCountryCode</fields>
         <fields>BillingGeocodeAccuracy</fields>
         <fields>BillingLatitude</fields>
         <fields>BillingLongitude</fields>
         <fields>BillingPostalCode</fields>
         <fields>BillingState</fields>
+        <fields>BillingStateCode</fields>
         <fields>BillingStreet</fields>
-        <fields>CleanStatus</fields>
         <fields>CreatedById</fields>
         <fields>CreatedDate</fields>
-        <fields>DandbCompanyId</fields>
+        <fields>CurrencyIsoCode</fields>
         <fields>Description</fields>
-        <fields>DunsNumber</fields>
         <fields>Fax</fields>
         <fields>Id</fields>
         <fields>Industry</fields>
@@ -33,37 +33,37 @@
         <fields>LastReferencedDate</fields>
         <fields>LastViewedDate</fields>
         <fields>MasterRecordId</fields>
-        <fields>NaicsCode</fields>
-        <fields>NaicsDesc</fields>
         <fields>Name</fields>
         <fields>NumberOfEmployees</fields>
-        <fields>OperatingHoursId</fields>
         <fields>OwnerId</fields>
         <fields>Ownership</fields>
         <fields>ParentId</fields>
         <fields>Phone</fields>
         <fields>PhotoUrl</fields>
         <fields>Rating</fields>
+        <fields>RecordTypeId</fields>
         <fields>ShippingCity</fields>
         <fields>ShippingCountry</fields>
+        <fields>ShippingCountryCode</fields>
         <fields>ShippingGeocodeAccuracy</fields>
         <fields>ShippingLatitude</fields>
         <fields>ShippingLongitude</fields>
         <fields>ShippingPostalCode</fields>
         <fields>ShippingState</fields>
+        <fields>ShippingStateCode</fields>
         <fields>ShippingStreet</fields>
         <fields>Sic</fields>
         <fields>SicDesc</fields>
         <fields>Site</fields>
+        <fields>Status__c</fields>
+        <fields>Support_Level__c</fields>
         <fields>SystemModstamp</fields>
         <fields>TickerSymbol</fields>
         <fields>Tier</fields>
-        <fields>Tradestyle</fields>
         <fields>Type</fields>
         <fields>Website</fields>
-        <fields>YearStarted</fields>
         <includeSessionId>true</includeSessionId>
-        <integrationUser>test-zjucrtfkmgju@example.com</integrationUser>
+        <integrationUser>admin@arc101.72005.com</integrationUser>
         <name>OBM Account</name>
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>

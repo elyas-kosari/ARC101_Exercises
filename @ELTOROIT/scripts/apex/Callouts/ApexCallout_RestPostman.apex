@@ -16,4 +16,3 @@ System.debug(response.getStatusCode());
 System.debug(response.getBody());
 Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
 System.debug('dttm: ' + results.get('dttm'));
-System.debug('message: ' + results.get('message'));
