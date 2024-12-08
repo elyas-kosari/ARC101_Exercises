@@ -16,10 +16,6 @@
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Opportunity</tabs>
-    <tabs>XAirline__x</tabs>
-    <tabs>XAirport__x</tabs>
-    <tabs>XAccount__x</tabs>
-    <tabs>XContact__x</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_Demo_UtilityBar</utilityBar>
 </CustomApplication>

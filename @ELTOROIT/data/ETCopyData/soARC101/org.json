@@ -20,7 +20,7 @@
 					"sObj": "Entitlement"
 				}
 			],
-			"describeUrl": "/services/data/v61.0/sobjects/Account/describe",
+			"describeUrl": "/services/data/v62.0/sobjects/Account/describe",
 			"fields": [
 				"AccountNumber",
 				"AccountSource",
@@ -75,7 +75,7 @@
 		},
 		"Contact": {
 			"children": [],
-			"describeUrl": "/services/data/v61.0/sobjects/Contact/describe",
+			"describeUrl": "/services/data/v62.0/sobjects/Contact/describe",
 			"fields": [
 				"AccountId",
 				"AssistantName",
@@ -137,7 +137,7 @@
 		},
 		"Entitlement": {
 			"children": [],
-			"describeUrl": "/services/data/v61.0/sobjects/Entitlement/describe",
+			"describeUrl": "/services/data/v62.0/sobjects/Entitlement/describe",
 			"fields": [
 				"AccountId",
 				"CasesPerEntitlement",
@@ -239,6 +239,7 @@
 		],
 		"AccountChangeEvent": [],
 		"AccountCleanInfo": [],
+		"AccountCleanInfoChangeEvent": [],
 		"AccountContactRole": [],
 		"AccountContactRoleChangeEvent": [],
 		"AccountFeed": [],
@@ -307,6 +308,7 @@
 		"ApptBundleSortPolicyFeed": [],
 		"Asset": [],
 		"AssetAccountParticipant": [],
+		"AssetAccountParticipantChangeEvent": [],
 		"AssetAccountParticipantFeed": [],
 		"AssetAccountParticipantHistory": [],
 		"AssetAction": [],
@@ -323,6 +325,7 @@
 		"AssetFeed": [],
 		"AssetHistory": [],
 		"AssetRelationship": [],
+		"AssetRelationshipChangeEvent": [],
 		"AssetRelationshipFeed": [],
 		"AssetRelationshipHistory": [],
 		"AssetShare": [],
@@ -339,6 +342,7 @@
 		"AssignedResourceHistory": [],
 		"AssignmentRule": [],
 		"AssociatedLocation": [],
+		"AssociatedLocationChangeEvent": [],
 		"AssociatedLocationHistory": [],
 		"AsyncApexJob": [],
 		"AsyncOperationEvent": [],
@@ -363,6 +367,7 @@
 		"AuraDefinitionInfo": [],
 		"AuthConfig": [],
 		"AuthConfigProviders": [],
+		"AuthProvParamFwdAllowlist": [],
 		"AuthProvider": [],
 		"AuthSession": [],
 		"AuthorizationForm": [],
@@ -372,6 +377,7 @@
 		"AuthorizationFormConsentHistory": [],
 		"AuthorizationFormConsentShare": [],
 		"AuthorizationFormDataUse": [],
+		"AuthorizationFormDataUseChangeEvent": [],
 		"AuthorizationFormDataUseHistory": [],
 		"AuthorizationFormDataUseShare": [],
 		"AuthorizationFormHistory": [],
@@ -395,11 +401,13 @@
 		"BulkApiResultEvent": [],
 		"BulkApiResultEventStore": [],
 		"BusinessBrand": [],
+		"BusinessBrandChangeEvent": [],
 		"BusinessBrandShare": [],
 		"BusinessHours": [],
 		"BusinessProcess": [],
 		"Calendar": [],
 		"CalendarView": [],
+		"CalendarViewChangeEvent": [],
 		"CalendarViewShare": [],
 		"CallCenter": [],
 		"CallCoachingMediaProvider": [],
@@ -432,6 +440,7 @@
 		"CaseTeamTemplateRecord": [],
 		"CategoryData": [],
 		"CategoryNode": [],
+		"ChatRetirementRdyMetrics": [],
 		"ChatterActivity": [],
 		"ChatterExtension": [],
 		"ChatterExtensionConfig": [],
@@ -441,6 +450,7 @@
 		"CollaborationGroupMember": [],
 		"CollaborationGroupMemberRequest": [],
 		"CollaborationGroupRecord": [],
+		"CollaborationGroupRecordChangeEvent": [],
 		"CollaborationInvitation": [],
 		"CollaborationRoom": [],
 		"ColorDefinition": [],
@@ -461,11 +471,13 @@
 		"CommSubscriptionHistory": [],
 		"CommSubscriptionShare": [],
 		"CommSubscriptionTiming": [],
+		"CommSubscriptionTimingChangeEvent": [],
 		"CommSubscriptionTimingFeed": [],
 		"CommSubscriptionTimingHistory": [],
 		"Community": [],
 		"ConcurLongRunApexErrEvent": [],
 		"ConferenceNumber": [],
+		"ConferenceNumberChangeEvent": [],
 		"ConnectedApplication": [],
 		"ConsumptionRate": [],
 		"ConsumptionRateHistory": [],
@@ -542,6 +554,7 @@
 		],
 		"ContactChangeEvent": [],
 		"ContactCleanInfo": [],
+		"ContactCleanInfoChangeEvent": [],
 		"ContactFeed": [],
 		"ContactHistory": [],
 		"ContactPointAddress": [],
@@ -579,6 +592,7 @@
 		"ContentDocumentLinkChangeEvent": [],
 		"ContentDocumentSubscription": [],
 		"ContentFolder": [],
+		"ContentFolderChangeEvent": [],
 		"ContentFolderItem": [],
 		"ContentFolderLink": [],
 		"ContentFolderMember": [],
@@ -612,6 +626,8 @@
 		"ContractLineOutcomeHistory": [],
 		"ContractLineOutcomeShare": [],
 		"ContractStatus": [],
+		"ConvIntelligenceSignalRule": [],
+		"ConvIntelligenceSignalSubRule": [],
 		"ConvMessageSendRequest": [],
 		"Conversation": [],
 		"ConversationEntry": [],
@@ -653,15 +669,17 @@
 		"DataAssessmentFieldMetric": [],
 		"DataAssessmentMetric": [],
 		"DataAssessmentValueMetric": [],
-		"DataKitDeploymentLog": [],
-		"DataKitDeploymentLogShare": [],
+		"DataMaskCustomValueLibrary": [],
+		"DataMaskCustomValueLibraryShare": [],
 		"DataObjectDataChgEvent": [],
 		"DataStatistics": [],
 		"DataType": [],
 		"DataUseLegalBasis": [],
+		"DataUseLegalBasisChangeEvent": [],
 		"DataUseLegalBasisHistory": [],
 		"DataUseLegalBasisShare": [],
 		"DataUsePurpose": [],
+		"DataUsePurposeChangeEvent": [],
 		"DataUsePurposeHistory": [],
 		"DataUsePurposeShare": [],
 		"DataWeaveResource": [],
@@ -683,6 +701,9 @@
 		"DuplicateRecordItem": [],
 		"DuplicateRecordSet": [],
 		"DuplicateRule": [],
+		"DynamicDataCapture": [],
+		"DynamicDataCaptureFeed": [],
+		"DynamicDataCaptureHistory": [],
 		"ELTOROit__e": [],
 		"EmailBounceEvent": [],
 		"EmailCapture": [],
@@ -761,6 +782,7 @@
 		"EventRelayConfig": [],
 		"EventRelayConfigChangeEvent": [],
 		"EventRelayFeedback": [],
+		"EvfPipelineSubTaskDetails": [],
 		"Expense": [],
 		"ExpenseChangeEvent": [],
 		"ExpenseFeed": [],
@@ -776,13 +798,26 @@
 		"ExpressionFilter": [],
 		"ExpressionFilterCriteria": [],
 		"ExpressionSetView": [],
+		"ExternalClientApplication": [],
 		"ExternalDataSource": [],
 		"ExternalDataSrcDescriptor": [],
 		"ExternalDataUserAuth": [],
 		"ExternalEncryptionRootKey": [],
 		"ExternalEvent": [],
+		"ExternalEventChangeEvent": [],
 		"ExternalEventMapping": [],
 		"ExternalEventMappingShare": [],
+		"ExtlClntAppOauthConsumer": [],
+		"ExtlClntAppOauthIpRange": [],
+		"ExtlClntAppOauthPlcyAttr": [],
+		"ExtlClntAppOauthPlcyCnfg": [],
+		"ExtlClntAppOauthPlcyCustmScp": [],
+		"ExtlClntAppOauthSetAttr": [],
+		"ExtlClntAppOauthSetCustmScp": [],
+		"ExtlClntAppOauthSettings": [],
+		"ExtlClntAppPlcyCnfg": [],
+		"ExtlClntAppSamplePlcyCnfg": [],
+		"ExtlClntAppSampleSettings": [],
 		"FeedAttachment": [],
 		"FeedComment": [],
 		"FeedItem": [],
@@ -798,6 +833,7 @@
 		"FieldServiceMobileSettings": [],
 		"FieldServiceMobileSettingsChangeEvent": [],
 		"FieldServiceOrgSettings": [],
+		"FieldSvcAddlMobSettings": [],
 		"FileEvent": [],
 		"FileEventStore": [],
 		"FileSearchActivity": [],
@@ -816,6 +852,7 @@
 		"FlowInterviewLogEntry": [],
 		"FlowInterviewLogShare": [],
 		"FlowInterviewShare": [],
+		"FlowOrchestration": [],
 		"FlowOrchestrationEvent": [],
 		"FlowOrchestrationInstance": [],
 		"FlowOrchestrationInstanceShare": [],
@@ -824,10 +861,14 @@
 		"FlowOrchestrationStageInstanceShare": [],
 		"FlowOrchestrationStepInstance": [],
 		"FlowOrchestrationStepInstanceShare": [],
+		"FlowOrchestrationVersion": [],
+		"FlowOrchestrationVersionChangeEvent": [],
 		"FlowOrchestrationWorkItem": [],
 		"FlowOrchestrationWorkItemShare": [],
 		"FlowRecord": [],
+		"FlowRecordChangeEvent": [],
 		"FlowRecordElement": [],
+		"FlowRecordElementChangeEvent": [],
 		"FlowRecordRelation": [],
 		"FlowRecordShare": [],
 		"FlowRecordVersion": [],
@@ -919,6 +960,8 @@
 		"LocationFeed": [],
 		"LocationGroup": [],
 		"LocationGroupAssignment": [],
+		"LocationGroupAssignmentChangeEvent": [],
+		"LocationGroupChangeEvent": [],
 		"LocationGroupFeed": [],
 		"LocationGroupHistory": [],
 		"LocationGroupShare": [],
@@ -965,6 +1008,7 @@
 		"MaintenanceWorkRuleHistory": [],
 		"MaintenanceWorkRuleShare": [],
 		"ManagedContent": [],
+		"ManagedContentChangeEvent": [],
 		"ManagedContentChannel": [],
 		"ManagedContentSpace": [],
 		"ManagedContentVariant": [],
@@ -975,11 +1019,14 @@
 		"MessagingChannel": [],
 		"MessagingChannelUsage": [],
 		"MessagingEndUser": [],
+		"MessagingEndUserChangeEvent": [],
 		"MessagingEndUserHistory": [],
 		"MessagingEndUserShare": [],
 		"MessagingSession": [],
+		"MessagingSessionChangeEvent": [],
 		"MessagingSessionFeed": [],
 		"MessagingSessionHistory": [],
+		"MessagingSessionMetrics": [],
 		"MessagingSessionShare": [],
 		"MilestoneType": [],
 		"MlFeatureValueMetric": [],
@@ -987,6 +1034,7 @@
 		"MobileSettingsAssignment": [],
 		"MsgChannelLanguageKeyword": [],
 		"MsgChannelUsageExternalOrg": [],
+		"MsgSessStatusChangedEvent": [],
 		"MutingPermissionSet": [],
 		"MyDomainDiscoverableLogin": [],
 		"Name": [],
@@ -1004,8 +1052,11 @@
 		"OperatingHours": [],
 		"OperatingHoursChangeEvent": [],
 		"OperatingHoursFeed": [],
+		"OperatingHoursHistory": [],
 		"OperatingHoursHoliday": [],
+		"OperatingHoursHolidayChangeEvent": [],
 		"OperatingHoursHolidayFeed": [],
+		"OperatingHoursHolidayHistory": [],
 		"OperatingHoursShare": [],
 		"Opportunity": [],
 		"OpportunityChangeEvent": [],
@@ -1094,6 +1145,7 @@
 		"PrivacySessionRecordFailureShare": [],
 		"ProcessDefinition": [],
 		"ProcessException": [],
+		"ProcessExceptionChangeEvent": [],
 		"ProcessExceptionEvent": [],
 		"ProcessExceptionShare": [],
 		"ProcessFlowMigration": [],
@@ -1156,6 +1208,7 @@
 		"ProductTransferState": [],
 		"ProductTransferStateHistory": [],
 		"ProductWarrantyTerm": [],
+		"ProductWarrantyTermChangeEvent": [],
 		"ProductWarrantyTermFeed": [],
 		"ProductWarrantyTermHistory": [],
 		"Profile": [],
@@ -1173,6 +1226,7 @@
 		"QuickTextHistory": [],
 		"QuickTextShare": [],
 		"QuickTextUsage": [],
+		"QuickTextUsageChangeEvent": [],
 		"QuickTextUsageShare": [],
 		"QuoteTemplateRichTextData": [],
 		"RecentlyViewed": [],
@@ -1405,7 +1459,9 @@
 		"TimeSheetShare": [],
 		"TimeSlot": [],
 		"TimeSlotChangeEvent": [],
+		"TimeSlotHistory": [],
 		"TodayGoal": [],
+		"TodayGoalChangeEvent": [],
 		"TodayGoalShare": [],
 		"Topic": [],
 		"TopicAssignment": [],
@@ -1426,6 +1482,7 @@
 		"UriEventStream": [],
 		"User": [],
 		"UserAppInfo": [],
+		"UserAppInfoChangeEvent": [],
 		"UserAppMenuCustomization": [],
 		"UserAppMenuCustomizationShare": [],
 		"UserAppMenuItem": [],
@@ -1435,6 +1492,7 @@
 		"UserDefinedLabelAssignmentShare": [],
 		"UserDefinedLabelShare": [],
 		"UserEmailPreferredPerson": [],
+		"UserEmailPreferredPersonChangeEvent": [],
 		"UserEmailPreferredPersonShare": [],
 		"UserEntityAccess": [],
 		"UserFeed": [],
@@ -1442,6 +1500,8 @@
 		"UserLicense": [],
 		"UserListView": [],
 		"UserListViewCriterion": [],
+		"UserLocalWebServerIdentity": [],
+		"UserLocalWebServerIdentityShare": [],
 		"UserLogin": [],
 		"UserPackageLicense": [],
 		"UserPermissionAccess": [],
@@ -1467,9 +1527,12 @@
 		"WarrantyTermShare": [],
 		"WebLink": [],
 		"WorkAccess": [],
+		"WorkAccessChangeEvent": [],
 		"WorkAccessShare": [],
 		"WorkBadge": [],
+		"WorkBadgeChangeEvent": [],
 		"WorkBadgeDefinition": [],
+		"WorkBadgeDefinitionChangeEvent": [],
 		"WorkBadgeDefinitionFeed": [],
 		"WorkBadgeDefinitionHistory": [],
 		"WorkBadgeDefinitionShare": [],
@@ -1477,6 +1540,7 @@
 		"WorkCapacityAvailabilityFeed": [],
 		"WorkCapacityAvailabilityShare": [],
 		"WorkCapacityLimit": [],
+		"WorkCapacityLimitChangeEvent": [],
 		"WorkCapacityLimitFeed": [],
 		"WorkCapacityLimitHistory": [],
 		"WorkCapacityLimitShare": [],
@@ -1524,6 +1588,7 @@
 		"WorkStepTemplateHistory": [],
 		"WorkStepTemplateShare": [],
 		"WorkThanks": [],
+		"WorkThanksChangeEvent": [],
 		"WorkThanksShare": [],
 		"WorkType": [],
 		"WorkTypeChangeEvent": [],
@@ -1905,6 +1970,9 @@
 			"Contact.RecordAssociatedGroups => CollaborationGroupRecord": [
 				"Child sObject [CollaborationGroupRecord] is not processed"
 			],
+			"Contact.null => CollaborationGroupRecordChangeEvent": [
+				"Child sObject [CollaborationGroupRecordChangeEvent] is not processed"
+			],
 			"Contact.CombinedAttachments => CombinedAttachment": [
 				"Child sObject [CombinedAttachment] is not processed"
 			],
@@ -1922,6 +1990,9 @@
 			],
 			"Contact.ContactCleanInfos => ContactCleanInfo": [
 				"Child sObject [ContactCleanInfo] is not processed"
+			],
+			"Contact.null => ContactCleanInfoChangeEvent": [
+				"Child sObject [ContactCleanInfoChangeEvent] is not processed"
 			],
 			"Contact.Feeds => ContactFeed": [
 				"Child sObject [ContactFeed] is not processed"
@@ -2046,8 +2117,14 @@
 			"Contact.MessagingEndUsers => MessagingEndUser": [
 				"Child sObject [MessagingEndUser] is not processed"
 			],
+			"Contact.null => MessagingEndUserChangeEvent": [
+				"Child sObject [MessagingEndUserChangeEvent] is not processed"
+			],
 			"Contact.MessagingSessions => MessagingSession": [
 				"Child sObject [MessagingSession] is not processed"
+			],
+			"Contact.null => MessagingSessionChangeEvent": [
+				"Child sObject [MessagingSessionChangeEvent] is not processed"
 			],
 			"Contact.Notes => Note": [
 				"Child sObject [Note] is not processed"
@@ -2139,6 +2216,9 @@
 			"Contact.PersonRecord => UserEmailPreferredPerson": [
 				"Child sObject [UserEmailPreferredPerson] is not processed"
 			],
+			"Contact.null => UserEmailPreferredPersonChangeEvent": [
+				"Child sObject [UserEmailPreferredPersonChangeEvent] is not processed"
+			],
 			"Contact.WorkOrders => WorkOrder": [
 				"Child sObject [WorkOrder] is not processed"
 			],
@@ -2159,6 +2239,9 @@
 			],
 			"Account.AccountCleanInfos => AccountCleanInfo": [
 				"Child sObject [AccountCleanInfo] is not processed"
+			],
+			"Account.null => AccountCleanInfoChangeEvent": [
+				"Child sObject [AccountCleanInfoChangeEvent] is not processed"
 			],
 			"Account.AccountContactRoles => AccountContactRole": [
 				"Child sObject [AccountContactRole] is not processed"
@@ -2199,11 +2282,17 @@
 			"Account.AssetAccountParticipantAccount => AssetAccountParticipant": [
 				"Child sObject [AssetAccountParticipant] is not processed"
 			],
+			"Account.null => AssetAccountParticipantChangeEvent": [
+				"Child sObject [AssetAccountParticipantChangeEvent] is not processed"
+			],
 			"Account.null => AssetChangeEvent": [
 				"Child sObject [AssetChangeEvent] is not processed"
 			],
 			"Account.AssociatedLocations => AssociatedLocation": [
 				"Child sObject [AssociatedLocation] is not processed"
+			],
+			"Account.null => AssociatedLocationChangeEvent": [
+				"Child sObject [AssociatedLocationChangeEvent] is not processed"
 			],
 			"Account.AttachedContentDocuments => AttachedContentDocument": [
 				"Child sObject [AttachedContentDocument] is not processed"
@@ -2234,6 +2323,9 @@
 			],
 			"Account.RecordAssociatedGroups => CollaborationGroupRecord": [
 				"Child sObject [CollaborationGroupRecord] is not processed"
+			],
+			"Account.null => CollaborationGroupRecordChangeEvent": [
+				"Child sObject [CollaborationGroupRecordChangeEvent] is not processed"
 			],
 			"Account.CombinedAttachments => CombinedAttachment": [
 				"Child sObject [CombinedAttachment] is not processed"
@@ -2373,8 +2465,14 @@
 			"Account.MessagingEndUsers => MessagingEndUser": [
 				"Child sObject [MessagingEndUser] is not processed"
 			],
+			"Account.null => MessagingEndUserChangeEvent": [
+				"Child sObject [MessagingEndUserChangeEvent] is not processed"
+			],
 			"Account.MessagingSessions => MessagingSession": [
 				"Child sObject [MessagingSession] is not processed"
+			],
+			"Account.null => MessagingSessionChangeEvent": [
+				"Child sObject [MessagingSessionChangeEvent] is not processed"
 			],
 			"Account.Notes => Note": [
 				"Child sObject [Note] is not processed"
@@ -2605,6 +2703,13 @@
 			"AccountCleanInfo": [
 				"Must be createable",
 				"Must be deletable",
+				"Was Not requested"
+			],
+			"AccountCleanInfoChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"AccountContactRole": [
@@ -2910,6 +3015,13 @@
 			"AssetAccountParticipant": [
 				"Was Not requested"
 			],
+			"AssetAccountParticipantChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"AssetAccountParticipantFeed": [
 				"Must be createable",
 				"Must be updateable",
@@ -2991,6 +3103,13 @@
 				"Was Not requested"
 			],
 			"AssetRelationship": [
+				"Was Not requested"
+			],
+			"AssetRelationshipChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"AssetRelationshipFeed": [
@@ -3078,6 +3197,13 @@
 				"Was Not requested"
 			],
 			"AssociatedLocation": [
+				"Was Not requested"
+			],
+			"AssociatedLocationChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"AssociatedLocationHistory": [
@@ -3202,6 +3328,9 @@
 				"Must be updateable",
 				"Was Not requested"
 			],
+			"AuthProvParamFwdAllowlist": [
+				"Was Not requested"
+			],
 			"AuthProvider": [
 				"Was Not requested"
 			],
@@ -3240,6 +3369,13 @@
 				"Was Not requested"
 			],
 			"AuthorizationFormDataUse": [
+				"Was Not requested"
+			],
+			"AuthorizationFormDataUseChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"AuthorizationFormDataUseHistory": [
@@ -3363,6 +3499,13 @@
 			"BusinessBrand": [
 				"Was Not requested"
 			],
+			"BusinessBrandChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"BusinessBrandShare": [
 				"Was Not requested"
 			],
@@ -3381,6 +3524,13 @@
 				"Was Not requested"
 			],
 			"CalendarView": [
+				"Was Not requested"
+			],
+			"CalendarViewChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"CalendarViewShare": [
@@ -3523,6 +3673,12 @@
 			"CategoryNode": [
 				"Was Not requested"
 			],
+			"ChatRetirementRdyMetrics": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"ChatterActivity": [
 				"Must be createable",
 				"Must be deletable",
@@ -3555,6 +3711,13 @@
 				"Was Not requested"
 			],
 			"CollaborationGroupRecord": [
+				"Was Not requested"
+			],
+			"CollaborationGroupRecordChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"CollaborationInvitation": [
@@ -3655,6 +3818,13 @@
 			"CommSubscriptionTiming": [
 				"Was Not requested"
 			],
+			"CommSubscriptionTimingChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"CommSubscriptionTimingFeed": [
 				"Must be createable",
 				"Must be updateable",
@@ -3681,6 +3851,13 @@
 				"Was Not requested"
 			],
 			"ConferenceNumber": [
+				"Was Not requested"
+			],
+			"ConferenceNumberChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"ConnectedApplication": [
@@ -3725,6 +3902,13 @@
 			"ContactCleanInfo": [
 				"Must be createable",
 				"Must be deletable",
+				"Was Not requested"
+			],
+			"ContactCleanInfoChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"ContactFeed": [
@@ -3903,6 +4087,13 @@
 			"ContentFolder": [
 				"Was Not requested"
 			],
+			"ContentFolderChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"ContentFolderItem": [
 				"Must be createable",
 				"Must be deletable",
@@ -4060,6 +4251,12 @@
 				"Must be createable",
 				"Must be deletable",
 				"Must be updateable",
+				"Was Not requested"
+			],
+			"ConvIntelligenceSignalRule": [
+				"Was Not requested"
+			],
+			"ConvIntelligenceSignalSubRule": [
 				"Was Not requested"
 			],
 			"ConvMessageSendRequest": [
@@ -4271,12 +4468,10 @@
 				"Must be updateable",
 				"Was Not requested"
 			],
-			"DataKitDeploymentLog": [
-				"Must be createable",
-				"Must be deletable",
+			"DataMaskCustomValueLibrary": [
 				"Was Not requested"
 			],
-			"DataKitDeploymentLogShare": [
+			"DataMaskCustomValueLibraryShare": [
 				"Was Not requested"
 			],
 			"DataObjectDataChgEvent": [
@@ -4304,6 +4499,13 @@
 			"DataUseLegalBasis": [
 				"Was Not requested"
 			],
+			"DataUseLegalBasisChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"DataUseLegalBasisHistory": [
 				"Must be createable",
 				"Must be deletable",
@@ -4314,6 +4516,13 @@
 				"Was Not requested"
 			],
 			"DataUsePurpose": [
+				"Was Not requested"
+			],
+			"DataUsePurposeChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"DataUsePurposeHistory": [
@@ -4423,6 +4632,20 @@
 				"Was Not requested"
 			],
 			"DuplicateRule": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"DynamicDataCapture": [
+				"Was Not requested"
+			],
+			"DynamicDataCaptureFeed": [
+				"Must be createable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"DynamicDataCaptureHistory": [
 				"Must be createable",
 				"Must be deletable",
 				"Must be updateable",
@@ -4670,6 +4893,11 @@
 				"Must be updateable",
 				"Was Not requested"
 			],
+			"EvfPipelineSubTaskDetails": [
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"Expense": [
 				"Was Not requested"
 			],
@@ -4738,6 +4966,12 @@
 				"Must be updateable",
 				"Was Not requested"
 			],
+			"ExternalClientApplication": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"ExternalDataSource": [
 				"Must be createable",
 				"Must be deletable",
@@ -4762,10 +4996,83 @@
 			"ExternalEvent": [
 				"Was Not requested"
 			],
+			"ExternalEventChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"ExternalEventMapping": [
 				"Was Not requested"
 			],
 			"ExternalEventMappingShare": [
+				"Was Not requested"
+			],
+			"ExtlClntAppOauthConsumer": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppOauthIpRange": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppOauthPlcyAttr": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppOauthPlcyCnfg": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppOauthPlcyCustmScp": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppOauthSetAttr": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppOauthSetCustmScp": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppOauthSettings": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppPlcyCnfg": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppSamplePlcyCnfg": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"ExtlClntAppSampleSettings": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"FeedAttachment": [
@@ -4842,6 +5149,12 @@
 				"Was Not requested"
 			],
 			"FieldServiceOrgSettings": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"FieldSvcAddlMobSettings": [
 				"Must be createable",
 				"Must be deletable",
 				"Must be updateable",
@@ -4926,8 +5239,6 @@
 				"Was Not requested"
 			],
 			"FlowInterview": [
-				"Must be createable",
-				"Must be updateable",
 				"Was Not requested"
 			],
 			"FlowInterviewLog": [
@@ -4948,6 +5259,10 @@
 			"FlowInterviewShare": [
 				"Was Not requested"
 			],
+			"FlowOrchestration": [
+				"Must be createable",
+				"Was Not requested"
+			],
 			"FlowOrchestrationEvent": [
 				"Must be deletable",
 				"Must be queryable",
@@ -4966,7 +5281,6 @@
 			"FlowOrchestrationLog": [
 				"Must be createable",
 				"Must be deletable",
-				"Must be updateable",
 				"Was Not requested"
 			],
 			"FlowOrchestrationStageInstance": [
@@ -4985,6 +5299,19 @@
 			"FlowOrchestrationStepInstanceShare": [
 				"Was Not requested"
 			],
+			"FlowOrchestrationVersion": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"FlowOrchestrationVersionChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"FlowOrchestrationWorkItem": [
 				"Must be createable",
 				"Must be deletable",
@@ -4997,9 +5324,23 @@
 				"Must be createable",
 				"Was Not requested"
 			],
+			"FlowRecordChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"FlowRecordElement": [
 				"Must be createable",
 				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"FlowRecordElementChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
 				"Must be updateable",
 				"Was Not requested"
 			],
@@ -5450,6 +5791,20 @@
 			"LocationGroupAssignment": [
 				"Was Not requested"
 			],
+			"LocationGroupAssignmentChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"LocationGroupChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"LocationGroupFeed": [
 				"Must be createable",
 				"Must be updateable",
@@ -5701,6 +6056,13 @@
 				"Must be updateable",
 				"Was Not requested"
 			],
+			"ManagedContentChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"ManagedContentChannel": [
 				"Must be createable",
 				"Must be deletable",
@@ -5755,6 +6117,13 @@
 			"MessagingEndUser": [
 				"Was Not requested"
 			],
+			"MessagingEndUserChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"MessagingEndUserHistory": [
 				"Must be createable",
 				"Must be deletable",
@@ -5767,6 +6136,13 @@
 			"MessagingSession": [
 				"Was Not requested"
 			],
+			"MessagingSessionChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"MessagingSessionFeed": [
 				"Must be createable",
 				"Must be updateable",
@@ -5774,6 +6150,11 @@
 			],
 			"MessagingSessionHistory": [
 				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"MessagingSessionMetrics": [
 				"Must be deletable",
 				"Must be updateable",
 				"Was Not requested"
@@ -5799,6 +6180,14 @@
 			],
 			"MsgChannelUsageExternalOrg": [
 				"Must be deletable",
+				"Was Not requested"
+			],
+			"MsgSessStatusChangedEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be retrieveable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"MutingPermissionSet": [
@@ -5880,11 +6269,30 @@
 				"Must be updateable",
 				"Was Not requested"
 			],
+			"OperatingHoursHistory": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"OperatingHoursHoliday": [
+				"Was Not requested"
+			],
+			"OperatingHoursHolidayChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"OperatingHoursHolidayFeed": [
 				"Must be createable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"OperatingHoursHolidayHistory": [
+				"Must be createable",
+				"Must be deletable",
 				"Must be updateable",
 				"Was Not requested"
 			],
@@ -6315,6 +6723,13 @@
 			"ProcessException": [
 				"Was Not requested"
 			],
+			"ProcessExceptionChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"ProcessExceptionEvent": [
 				"Must be deletable",
 				"Must be queryable",
@@ -6629,6 +7044,13 @@
 			"ProductWarrantyTerm": [
 				"Was Not requested"
 			],
+			"ProductWarrantyTermChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"ProductWarrantyTermFeed": [
 				"Must be createable",
 				"Must be updateable",
@@ -6697,6 +7119,13 @@
 			"QuickTextUsage": [
 				"Must be createable",
 				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
+			"QuickTextUsageChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
 				"Must be updateable",
 				"Was Not requested"
 			],
@@ -7845,7 +8274,20 @@
 				"Must be updateable",
 				"Was Not requested"
 			],
+			"TimeSlotHistory": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"TodayGoal": [
+				"Was Not requested"
+			],
+			"TodayGoalChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"TodayGoalShare": [
@@ -7941,6 +8383,13 @@
 			"UserAppInfo": [
 				"Was Not requested"
 			],
+			"UserAppInfoChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"UserAppMenuCustomization": [
 				"Was Not requested"
 			],
@@ -7976,6 +8425,13 @@
 			"UserEmailPreferredPerson": [
 				"Was Not requested"
 			],
+			"UserEmailPreferredPersonChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"UserEmailPreferredPersonShare": [
 				"Was Not requested"
 			],
@@ -8008,6 +8464,12 @@
 				"Was Not requested"
 			],
 			"UserListViewCriterion": [
+				"Was Not requested"
+			],
+			"UserLocalWebServerIdentity": [
+				"Was Not requested"
+			],
+			"UserLocalWebServerIdentityShare": [
 				"Was Not requested"
 			],
 			"UserLogin": [
@@ -8114,13 +8576,34 @@
 			"WorkAccess": [
 				"Was Not requested"
 			],
+			"WorkAccessChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"WorkAccessShare": [
 				"Was Not requested"
 			],
 			"WorkBadge": [
 				"Was Not requested"
 			],
+			"WorkBadgeChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
+				"Was Not requested"
+			],
 			"WorkBadgeDefinition": [
+				"Was Not requested"
+			],
+			"WorkBadgeDefinitionChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"WorkBadgeDefinitionFeed": [
@@ -8149,6 +8632,13 @@
 				"Was Not requested"
 			],
 			"WorkCapacityLimit": [
+				"Was Not requested"
+			],
+			"WorkCapacityLimitChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"WorkCapacityLimitFeed": [
@@ -8378,6 +8868,13 @@
 				"Was Not requested"
 			],
 			"WorkThanks": [
+				"Was Not requested"
+			],
+			"WorkThanksChangeEvent": [
+				"Must be createable",
+				"Must be deletable",
+				"Must be queryable",
+				"Must be updateable",
 				"Was Not requested"
 			],
 			"WorkThanksShare": [

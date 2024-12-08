@@ -1,10 +1,8 @@
 {
-	"orgName": "ELTOROIT Demos Computing",
+	"orgName": "ELTOROIT Demos ARC101",
 	"edition": "Developer",
 	"hasSampleData": false,
-	"features": [
-		"EnableSetPasswordInApi"
-	],
+	"features": ["EnableSetPasswordInApi"],
 	"settings": {
 		"lightningExperienceSettings": {
 			"enableS1DesktopEnabled": true
