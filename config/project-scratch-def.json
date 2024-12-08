@@ -1,7 +1,7 @@
 {
 	"orgName": "ELTOROIT Demos ARC101",
 	"edition": "Developer",
-	"hasSampleData": false,
+	"hasSampleData": true,
 	"features": ["EnableSetPasswordInApi"],
 	"settings": {
 		"lightningExperienceSettings": {

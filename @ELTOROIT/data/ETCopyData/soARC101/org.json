@@ -1601,15 +1601,7 @@
 		"WorkTypeGroupMemberHistory": [],
 		"WorkTypeGroupShare": [],
 		"WorkTypeHistory": [],
-		"WorkTypeShare": [],
-		"XAccount__ChangeEvent": [],
-		"XAccount__x": [],
-		"XAirline__ChangeEvent": [],
-		"XAirline__x": [],
-		"XAirport__ChangeEvent": [],
-		"XAirport__x": [],
-		"XContact__ChangeEvent": [],
-		"XContact__x": []
+		"WorkTypeShare": []
 	},
 	"rejected": {
 		"ADD_FIELD": {
@@ -2632,9 +2624,6 @@
 			],
 			"Account.null => WorkPlanSelectionRuleChangeEvent": [
 				"Child sObject [WorkPlanSelectionRuleChangeEvent] is not processed"
-			],
-			"Account.XAccounts__r => XAccount__x": [
-				"Child sObject [XAccount__x] is not processed"
 			]
 		},
 		"ADD_SOBJECT": {
@@ -8933,46 +8922,6 @@
 				"Was Not requested"
 			],
 			"WorkTypeShare": [
-				"Was Not requested"
-			],
-			"XAccount__ChangeEvent": [
-				"Must be createable",
-				"Must be deletable",
-				"Must be queryable",
-				"Must be updateable",
-				"Was Not requested"
-			],
-			"XAccount__x": [
-				"Was Not requested"
-			],
-			"XAirline__ChangeEvent": [
-				"Must be createable",
-				"Must be deletable",
-				"Must be queryable",
-				"Must be updateable",
-				"Was Not requested"
-			],
-			"XAirline__x": [
-				"Was Not requested"
-			],
-			"XAirport__ChangeEvent": [
-				"Must be createable",
-				"Must be deletable",
-				"Must be queryable",
-				"Must be updateable",
-				"Was Not requested"
-			],
-			"XAirport__x": [
-				"Was Not requested"
-			],
-			"XContact__ChangeEvent": [
-				"Must be createable",
-				"Must be deletable",
-				"Must be queryable",
-				"Must be updateable",
-				"Was Not requested"
-			],
-			"XContact__x": [
 				"Was Not requested"
 			]
 		},
