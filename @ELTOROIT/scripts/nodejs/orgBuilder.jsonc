@@ -21,6 +21,7 @@
 		// Push metadata
 		"PushMetadata",
 		{ "AssignPermissionSet": "psTest" },
+		// { "AssignPermissionSet": "psNamedCredentials" },
 		{ "DeployProfile": "force-apps/doNotDeploy/main/default/profiles/Admin.profile-meta.xml" },
 
 		// Loading Data
@@ -32,7 +33,7 @@
 		{ "ManualMetadata": { "url": "/lightning/setup/OauthOidcSettings/home", "message": "Enable oAuth UNPW" } },
 		{ "ManualMetadata": { "url": "/lightning/setup/CorsWhitelistEntries/home", "message": "Enable CORS for OAuth endpoints" } },
 		{ "ManualMetadata": { "url": "/lightning/setup/PermSets/home", "message": "Enable All [External Credential Principal Access] in permission set named [psNamedCredentials]" } },
-		{ "ManualMetadata": { "url": "/lightning/setup/NavigationMenus/home", "message": "Enable Device Flow and Grab oAuth credentials for [ARC101], and update ./etLogs/_user.json" } },
+		{ "ManualMetadata": { "url": "/lightning/setup/NavigationMenus/home", "message": "Grab oAuth credentials for [ARC101], and update ./etLogs/_user.json" } },
 
 		// Print results
 		"ShowFinalSuccess"

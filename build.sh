@@ -5,8 +5,8 @@ exe() { echo "\$ $@" ; "$@" ; }
 exe sfdx force source push --forceoverwrite --json
 if [ $? -eq 0 ] 
 then 
-    print "\u001b[42m\u001b[1;30m*** *** SUCCESS *** ***\u001b[0m"
+    echo -e "\033[42m\033[1;30m*** *** SUCCESS *** ***\033[0m"
 else 
-    print "\u001b[43m\u001b[1;31m*** *** FAILED *** ***\u001b[0m"
+    echo -e "\033[43m\033[1;31m*** *** FAILED *** ***\033[0m"
 fi
 date
