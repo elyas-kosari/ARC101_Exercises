@@ -165,11 +165,6 @@
         <fields>CONTACT.PHONE1</fields>
         <relatedList>RelatedContactList</relatedList>
     </relatedLists>
-    <relatedLists>
-        <fields>Name__c</fields>
-        <fields>DisplayUrl</fields>
-        <relatedList>XAccount__x.AccountNumber__c</relatedList>
-    </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
