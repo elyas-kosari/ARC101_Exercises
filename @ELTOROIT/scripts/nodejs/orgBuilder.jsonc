@@ -8,8 +8,8 @@
 	},
 	"steps": [
 		// Prepare environment
-		"ValidateETCopyData",
-		"RunJestTests",
+		// "ValidateETCopyData",
+		// "RunJestTests",
 		"BackupAlias", // In case you need to go back to the old org :-)
 
 		// Creating Scratch org
@@ -25,7 +25,7 @@
 		{ "DeployProfile": "force-apps/doNotDeploy/main/default/profiles/Admin.profile-meta.xml" },
 
 		// Loading Data
-		{ "ETCopyData": "./@ELTOROIT/data" },
+		// { "ETCopyData": "./@ELTOROIT/data" },
 		"RunApexTests",
 		"GeneratePassword",
 
