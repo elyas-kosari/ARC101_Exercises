@@ -1,6 +1,6 @@
 {
 	"settings": {
-		"days": 1,
+		"days": 30,
 		"alias": "soARC101",
 		"OpenBrowser": true,
 		"QuitOnErrors": true,
@@ -14,7 +14,7 @@
 
 		// Creating Scratch org
 		"CreateScratchOrg",
-		"CreateFinestDebugLevel",
+		// "CreateFinestDebugLevel",
 		"ShowDeployPage",
 		{ "ExecuteApex": "@ELTOROIT/scripts/apex/testApex_Good.apex" },
 
