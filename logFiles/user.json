@@ -1,0 +1,34 @@
+{
+  "status": 0,
+  "result": {
+    "accessToken": "00DDS0000021iwj!ARMAQPL2SU0ETEqGKc2gHjDDG3B1ZdheWBLTVkJ_ntXROBfCDvNl_qJegkmFjTJhZqlNN7asBjZCxOR7OAkS4KLvGsvzNRZj",
+    "id": "005DS00000yHvibYAC",
+    "instanceUrl": "https://page-app-7995-dev-ed.scratch.my.salesforce.com",
+    "loginUrl": "https://CS252.salesforce.com",
+    "orgId": "00DDS0000021iwj2AA",
+    "profileName": "System Administrator",
+    "username": "test-ka38gdrorsre@example.com",
+    "alias": "soARC101",
+    "password": "khSokumz8uy[o"
+  },
+  "warnings": [
+    "This command exposes sensitive information that allows for subsequent activity using your current authenticated session.\nSharing this information is equivalent to logging someone in under the current credential, resulting in unintended\naccess and escalation of privilege.\nFor additional information, review the authorization section of\nthe https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_web_flow.htm"
+  ]
+}
+{
+  "status": 0,
+  "result": {
+    "accessToken": "00DDU000000oLv7!AR0AQBasguRITpDPZoRqP2C.ccBQrYC3nZCoauiO1gjX9u.CsG5LFCg.KUhsjcpmTnHjCQ58PZHYfMhtwnJkEVlmE_FCJFCU",
+    "id": "005DU00000GapsEYAR",
+    "instanceUrl": "https://nosoftware-power-3883-dev-ed.scratch.my.salesforce.com",
+    "loginUrl": "https://CS254.salesforce.com",
+    "orgId": "00DDU000000oLv72AE",
+    "profileName": "System Administrator",
+    "username": "test-2rtj3cbqjhef@example.com",
+    "alias": "soARC101",
+    "password": "rc_qeY1qugygf"
+  },
+  "warnings": [
+    "This command exposes sensitive information that allows for subsequent activity using your current authenticated session.\nSharing this information is equivalent to logging someone in under the current credential, resulting in unintended\naccess and escalation of privilege.\nFor additional information, review the authorization section of\nthe https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_web_flow.htm"
+  ]
+}
