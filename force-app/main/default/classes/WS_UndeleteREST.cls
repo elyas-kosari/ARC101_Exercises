@@ -1,4 +1,4 @@
-@RestResource(urlMapping='/ELTOROit/undelete/*')
+@RestResource(urlMapping='/undelete/*')
 global with sharing class WS_UndeleteREST {
 	@HttpPatch
 	global static String sumPATCH(String sObjectName, ID id) {
