@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <deploymentStatus>Deployed</deploymentStatus>
     <eventType>HighVolume</eventType>
-    <label>ELTOROit</label>
-    <pluralLabel>ELTOROit</pluralLabel>
+    <label>Message Event</label>
+    <pluralLabel>Message Events</pluralLabel>
     <publishBehavior>PublishAfterCommit</publishBehavior>
 </CustomObject>

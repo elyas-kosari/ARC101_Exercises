@@ -16,7 +16,6 @@
 
 		// Push metadata
 		"PushMetadata",
-		{ "AssignPermissionSet": "psTest" },
 
 		// Loading Data
 		"GeneratePassword",

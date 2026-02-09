@@ -17,5 +17,4 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-Opportunity</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>LWC_Demo_UtilityBar</utilityBar>
 </CustomApplication>
