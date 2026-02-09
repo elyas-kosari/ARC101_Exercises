@@ -9,5 +9,7 @@
 	"salesforcedx-vscode-core.push-or-deploy-on-save.enabled": false,
 	"salesforcedx-vscode-core.push-or-deploy-on-save.ignoreConflictsOnPush": true,
 	"salesforcedx-vscode-core.push-or-deploy-on-save.preferDeployOnSave": false,
-	"salesforcedx-vscode-core.push-or-deploy-on-save.showOutputPanel": true
+	"salesforcedx-vscode-core.push-or-deploy-on-save.showOutputPanel": true,
+	"xml.preferences.showSchemaDocumentationType": "none",
+	"salesforce.einsteinForDevelopers.enable": false
 }

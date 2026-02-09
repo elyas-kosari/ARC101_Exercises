@@ -3,21 +3,9 @@ import Colors2 from './colors.mjs';
 import OS2 from './lowLevelOs.mjs';
 import ET_Asserts from './etAsserts.mjs';
 
-class MyException extends Error {
-	data;
-	constructor({ message, data }) {
-		super(message);
-		this.data = data;
-	}
-}
-
 const resultSkipSFDX = ({ config, stepName }) => {
 	let output = null;
 	switch (stepName) {
-		case 'ValidateETCopyData': {
-			output = 'etcopydata - debug';
-			break;
-		}
 		case 'BackupAlias': {
 			output = JSON.stringify({ result: [{ alias: config.settings.alias }] });
 			break;
@@ -98,42 +86,6 @@ export default class SFDX {
 		}
 	}
 
-	//#region STEPS
-	async ValidateETCopyData({ config }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		// command = 'sfdx plugins';
-		command = './node_modules/sfdx-cli/bin/run plugins';
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		let result = await this._runSFDX({ config, command, logFile });
-
-		// Process results
-		let plugins = result.STDOUT.split('\n');
-		let etcd = plugins.filter((plugin) => plugin.startsWith('etcopydata'));
-		if (etcd.length !== 1) {
-			let error = 'Could not find plugin for ETCopyData installed';
-			Logs2.reportErrorMessage({ config, msg: error });
-			throw new MyException({ message: `${config.currentStep} failed`, data: error });
-			// process.exit(-5);
-		} else {
-			Colors2.sfdxShowNote({ msg: etcd[0] });
-		}
-	}
-
-	async RunJestTests({ config }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = 'node node_modules/@salesforce/sfdx-lwc-jest/bin/sfdx-lwc-jest';
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runAndLog({ config, command, logFile });
-	}
-
 	async BackupAlias({ config }) {
 		ET_Asserts.hasData({ value: config, message: 'config' });
 		let logFile, command;
@@ -184,50 +136,6 @@ export default class SFDX {
 		await setAsDefault();
 	}
 
-	async CreateFinestDebugLevel({ config }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		let logFile, command;
-
-		let values = '';
-		values += 'DeveloperName=FINEST ';
-		values += 'MasterLabel=FINEST ';
-		values += 'Database=FINEST ';
-		values += 'Callout=FINEST ';
-		values += 'ApexCode=FINEST ';
-		values += 'Validation=FINEST ';
-		values += 'Workflow=FINEST ';
-		values += 'ApexProfiling=FINEST ';
-		values += 'Visualforce=FINEST ';
-		values += 'System=FINEST ';
-		values += 'Wave=FINEST ';
-		values += 'Nba=FINEST ';
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = `sf data create record --use-tooling-api --sobject=DebugLevel --values="${values}" --json`;
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-	}
-
-	async PauseToCheckOrg({ config }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = 'sf org open --json';
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-		if (config.settings.UserOnScreen) {
-			let result = await Logs2.promptYesNo({ config, question: 'Was the org created succesfully?' });
-			if (!result) {
-				throw new Error(`${config.currentStep} failed`);
-			}
-		} else {
-			this._skipBecauseCICD({ config });
-		}
-	}
-
 	async ShowDeployPage({ config }) {
 		ET_Asserts.hasData({ value: config, message: 'config' });
 		let logFile, command;
@@ -235,66 +143,6 @@ export default class SFDX {
 		const { stepNumber, stepMethod } = this.getStepId({ config });
 		config.currentStep = `${stepNumber}. ${stepMethod}`;
 		command = `sf org open --path="${config.deployPage}" --json`;
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-	}
-
-	async DeployMetadata({ config, data }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		ET_Asserts.hasData({ value: data, message: 'data' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = `sf project deploy start --source-dir="${data}" --wait=30 --verbose --json`;
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-	}
-
-	async ManualMetadata({ config, data }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		ET_Asserts.hasData({ value: data, message: 'data' });
-		ET_Asserts.hasData({ value: data.url, message: 'data.url' });
-		ET_Asserts.hasData({ value: data.message, message: 'data.message' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = `sf org open --path="${data.url}" --json`;
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-
-		if (config.settings.UserOnScreen) {
-			let result = await Logs2.promptYesNo({ config, message: data.message, question: 'Did you complete the manual steps on this page?' });
-			if (!result) {
-				throw new Error(`${config.currentStep} failed`);
-			}
-		} else {
-			this._skipBecauseCICD({ config });
-		}
-	}
-
-	async ExecuteApex({ config, data }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		ET_Asserts.hasData({ value: data, message: 'data' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = `sf apex run -f "${data}" --json`;
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-	}
-
-	async InstallPackage({ config, data }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		ET_Asserts.hasData({ value: data, message: 'data' });
-		let logFile, command;
-
-		const key = data.key ? ` --installation-key="${data.key}" ` : '';
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = `sf package install --apex-compile=all --package "${data.id}" ${key} --wait=30 --no-prompt --json`;
 		logFile = `${stepNumber}_${stepMethod}.json`;
 		await this._runSFDX({ config, command, logFile });
 	}
@@ -318,84 +166,6 @@ export default class SFDX {
 		const { stepNumber, stepMethod } = this.getStepId({ config });
 		config.currentStep = `${stepNumber}. ${stepMethod}`;
 		command = `sf force user permset assign --perm-set-name="${data}" --json`;
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-	}
-
-	async DeployProfile({ config, data }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		ET_Asserts.hasData({ value: data, message: 'data' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = `sf project deploy start --source-dir="${data}" --ignore-conflicts --wait=30 --verbose --json`;
-		logFile = `${stepNumber}_${stepMethod}.json`;
-
-		// Move .forceignore (hide it)
-		let errors = [];
-		const pathOriginal = '.forceignore';
-		const pathHidden = 'etLogs/.forceignore';
-		try {
-			await OS2.moveFile({ config, oldPath: pathOriginal, newPath: pathHidden });
-		} catch (ex) {
-			errors.push(ex);
-		}
-
-		// Deploy profile
-		try {
-			await this._runSFDX({ config, command, logFile });
-		} catch (ex) {
-			errors.push(ex);
-		}
-
-		// Move .forceignore (restore it)
-		try {
-			await OS2.moveFile({ config, oldPath: pathHidden, newPath: pathOriginal });
-		} catch (ex) {
-			errors.push(ex);
-		}
-
-		if (errors.length > 0) {
-			throw new MyException(`${config.currentStep} failed`, errors);
-		}
-	}
-
-	async ETCopyData({ config, data }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		ET_Asserts.hasData({ value: data, message: 'data' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		// sfdx ETCopyData delete --configfolder="./@ELTOROIT/data" --loglevel trace --json > ./etLogs/etCopyData.tab
-		// sfdx ETCopyData export --configfolder="./@ELTOROIT/data" --loglevel trace --json > ./etLogs/etCopyData.tab
-		// sfdx ETCopyData import --configfolder="./@ELTOROIT/data" --loglevel trace --json > ./etLogs/etCopyData.tab
-		// command = `sfdx ETCopyData import --configfolder "${data}" --loglevel="info" --json --orgsource="${config.settings.alias}" --orgdestination="${config.settings.alias}"`;
-		command = `./node_modules/sfdx-cli/bin/run ETCopyData import --configfolder "${data}" --loglevel="info" --json --orgsource="${config.settings.alias}" --orgdestination="${config.settings.alias}"`;
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-	}
-
-	async RunApexTests({ config }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = 'sf apex run test --code-coverage --json --result-format=json --wait=60';
-		logFile = `${stepNumber}_${stepMethod}.json`;
-		await this._runSFDX({ config, command, logFile });
-	}
-
-	async PublishCommunity({ config, data }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		ET_Asserts.hasData({ value: data, message: 'data' });
-		let logFile, command;
-
-		const { stepNumber, stepMethod } = this.getStepId({ config });
-		config.currentStep = `${stepNumber}. ${stepMethod}`;
-		command = `sf community publish --name "${data}" --json`;
 		logFile = `${stepNumber}_${stepMethod}.json`;
 		await this._runSFDX({ config, command, logFile });
 	}
@@ -435,42 +205,6 @@ export default class SFDX {
 
 		await createPassword();
 		await displayPassword();
-	}
-
-	async DeployToSandbox({ config, data }) {
-		ET_Asserts.hasData({ value: config, message: 'config' });
-		ET_Asserts.hasData({ value: data, message: 'data' });
-		let logFile, command;
-
-		const openDeployPage = async () => {
-			const { stepNumber, stepMethod } = this.getStepId({ config, offset: 1 });
-			config.currentStep = `${stepNumber}. ${stepMethod} (Open Deploy page)`;
-			command = `sf org open --target-org="${data.alias}" --path=${config.deployPage} --json`;
-			logFile = `${stepNumber}_${stepMethod}.json`;
-			await this._runSFDX({ config, command, logFile });
-		};
-
-		const performDeployment = async () => {
-			config.stepNumber++;
-			const { stepNumber, stepMethod } = this.getStepId({ config, offset: 1 });
-			config.currentStep = `${stepNumber}. ${stepMethod} (Perform Deployment)`;
-			command = `sf project deploy start --source-dir="${data.folder}" --target-org="${data.alias}" --verbose --wait=30 --json`;
-			logFile = `${stepNumber}_${stepMethod}.json`;
-			await this._runSFDX({ config, command, logFile });
-		};
-
-		const runTests = async () => {
-			config.stepNumber++;
-			const { stepNumber, stepMethod } = this.getStepId({ config, offset: 1 });
-			config.currentStep = `${stepNumber}. ${stepMethod} (Run tests)`;
-			command = `sf apex run test --code-coverage --json --result-format=json --wait=60 --target-org="${data.alias}" --json`;
-			logFile = `${stepNumber}_${stepMethod}.json`;
-			await this._runSFDX({ config, command, logFile });
-		};
-
-		await openDeployPage();
-		await performDeployment();
-		await runTests();
 	}
 
 	async ShowFinalSuccess({ config }) {

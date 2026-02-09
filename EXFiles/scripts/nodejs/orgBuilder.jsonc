@@ -1,0 +1,27 @@
+{
+	"settings": {
+		"days": 30,
+		"alias": "soARC101",
+		"OpenBrowser": true,
+		"QuitOnErrors": true,
+		"UserOnScreen": true // Can I prompt the user for manual verification? On CICD, this should be false
+	},
+	"steps": [
+		"BackupAlias", // In case you need to go back to the old org :-)
+
+		// Creating Scratch org
+		"CreateScratchOrg",
+
+		"ShowDeployPage",
+
+		// Push metadata
+		"PushMetadata",
+		{ "AssignPermissionSet": "psTest" },
+
+		// Loading Data
+		"GeneratePassword",
+
+		// Print results
+		"ShowFinalSuccess"
+	]
+}

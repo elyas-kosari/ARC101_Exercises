@@ -102,10 +102,6 @@
         <field>ELTOROit__e.message__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    <loginIpRanges>
-        <endAddress>255.255.255.255</endAddress>
-        <startAddress>0.0.0.0</startAddress>
-    </loginIpRanges>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>

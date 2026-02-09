@@ -20,18 +20,13 @@
 	"homepage": "https://github.com/eltoroit/ETScratchOrgsStarter#readme",
 	"scripts": {
 		"build": "./build.sh",
-		"createOrg": "node @ELTOROIT/scripts/nodejs/orgBuilder.mjs --config-file=@ELTOROIT/scripts/nodejs/orgBuilder.jsonc",
-		"exportData": "./node_modules/sfdx-cli/bin/run ETCopyData export --configfolder ./@ELTOROIT/data --loglevel trace --json",
-		"importData": "./node_modules/sfdx-cli/bin/run ETCopyData import --configfolder ./@ELTOROIT/data --loglevel trace --json",
-		"deleteData": "./node_modules/sfdx-cli/bin/run ETCopyData delete --configfolder ./@ELTOROIT/data --loglevel trace --json"
+		"createOrg": "node EXFiles/scripts/nodejs/orgBuilder.mjs --config-file=EXFiles/scripts/nodejs/orgBuilder.jsonc"
 	},
 	"devDependencies": {
 		"@prettier/plugin-xml": "2.2.0",
 		"@salesforce/eslint-config-lwc": "3.4.0",
 		"@salesforce/eslint-plugin-aura": "2.1.0",
 		"@salesforce/sfdx-lwc-jest": "1.3.0",
-		"eslint": "8.40.0",
-		"eslint-config-prettier": "8.8.0",
 		"husky": "8.0.3",
 		"lint-staged": "13.2.2",
 		"prettier": "2.8.8",
